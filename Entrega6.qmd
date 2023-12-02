@@ -7,7 +7,6 @@ editor: visual
 
 Este es el [repositorio](https://github.com/GSMir/Entrega6) de GitHub en el que alojaremos todos los archivos relacionados con esta entrega.
 
-
 ```{r}
 # Cargamos las librerías que hagan falta:
 
@@ -31,7 +30,6 @@ matrix_pm <- read.csv("ANIMALS-matrixPM.txt", header = FALSE, sep = " ")
 phylum_list <- read.table("fileListANIMAL_phylum.txt")
 ```
 
-
 ```{r}
 # Aquí he querido asignar colores random a cada Phylum:
 
@@ -40,28 +38,70 @@ colores_predefinidos <- c("red", "blue", "green", "darkorange", "deepskyblue", "
                           "pink", "navy")
 ```
 
-
 ```{r}
-mds_result <- cmdscale(matrix_sp, k = 2)
+mds_vh_result <- cmdscale(matrix_vh, k = 2)
+mds_sp_result <- cmdscale(matrix_sp, k = 2)
+mds_pm_result <- cmdscale(matrix_pm, k = 2)
 ```
 
-
+#VH
 
 ```{r}
 # Asegurándonos de que mds_result es un data frame y tiene nombres de fila
 
-mds_data <- as.data.frame(mds_result)
-mds_data$phylum <- phylum_list$V2
-mds_data$phylum <- as.factor(mds_data$phylum)  # La he tenido que guardar como factor para que no petase luego el código.
+mds_vh_data <- as.data.frame(mds_vh_result)
+mds_vh_data$phylum <- phylum_list$V2
+mds_vh_data$phylum <- as.factor(mds_vh_data$phylum)  # La he tenido que guardar como factor para que no petase luego el código.
 ```
 
 ```{r}
 # Creamos el gráfico:
 
-ggplot(mds_data, aes(x = V1, y = V2, color = phylum)) + 
+ggplot(mds_vh_data, aes(x = V1, y = V2, color = phylum)) + 
   geom_point() +
   theme_minimal() +
   labs(title = "MDS Plot of VH Matrix by Phylum", x = "MDS Dim 1", y = "MDS Dim 2") +
+  scale_color_manual(values = colores_predefinidos) # Esto usa una paleta de colores predefinida 
+  
+```
+
+
+#SP
+```{r}
+# Asegurándonos de que mds_result es un data frame y tiene nombres de fila
+
+mds_sp_data <- as.data.frame(mds_sp_result)
+mds_sp_data$phylum <- phylum_list$V2
+mds_sp_data$phylum <- as.factor(mds_sp_data$phylum)  # La he tenido que guardar como factor para que no petase luego el código.
+```
+
+```{r}
+# Creamos el gráfico:
+
+ggplot(mds_sp_data, aes(x = V1, y = V2, color = phylum)) + 
+  geom_point() +
+  theme_minimal() +
+  labs(title = "MDS Plot of SP Matrix by Phylum", x = "MDS Dim 1", y = "MDS Dim 2") +
+  scale_color_manual(values = colores_predefinidos) # Esto usa una paleta de colores predefinida 
+  
+```
+
+#PM
+```{r}
+# Asegurándonos de que mds_result es un data frame y tiene nombres de fila
+
+mds_pm_data <- as.data.frame(mds_pm_result)
+mds_pm_data$phylum <- phylum_list$V2
+mds_pm_data$phylum <- as.factor(mds_pm_data$phylum)  # La he tenido que guardar como factor para que no petase luego el código.
+```
+
+```{r}
+# Creamos el gráfico:
+
+ggplot(mds_pm_data, aes(x = V1, y = V2, color = phylum)) + 
+  geom_point() +
+  theme_minimal() +
+  labs(title = "MDS Plot of PM Matrix by Phylum", x = "MDS Dim 1", y = "MDS Dim 2") +
   scale_color_manual(values = colores_predefinidos) # Esto usa una paleta de colores predefinida 
   
 ```
