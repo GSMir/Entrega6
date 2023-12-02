@@ -1,0 +1,44 @@
+---
+title: "Entrega 6"
+author: "Ángel García, Arnau Piferrer  y Guillem Serra"
+format: html
+editor: visual
+---
+
+Este es el [repositorio](https://github.com/GSMir/Entrega6) de GitHub en el que alojaremos todos los archivos relacionados con esta entrega.
+
+
+```{r}
+# Cargamos las librerías que hagan falta:
+
+library(tools)
+library(HSAUR2)
+library(MVA)
+```
+
+```{r}
+# Cargamos nuestras matrices de distancias:
+
+matrix_vh <- read.csv("ANIMALS-matrixVH.txt", header = FALSE, sep = " ")
+matrix_sp <- read.csv("ANIMALS-matrixSP.txt", header = FALSE, sep = " ")
+matrix_pm <- read.csv("ANIMALS-matrixPM.txt", header = FALSE, sep = " ")
+```
+
+```{r}
+# Cargamos los datos del phylum de cada animal:
+
+phylum_list <- read.table("fileListANIMAL_phylum.txt")
+```
+
+
+```{r}
+# Aquí he querido asignar colores random a cada Phylum:
+
+colores_predefinidos <- c("red", "blue", "green", "darkorange", "deepskyblue", "chartreuse", 
+                          "darkorchid", "gold", "darkgreen", "royalblue", "brown", "grey", 
+                          "pink", "navy")
+```
+
+
+
+
