@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aquí he querido asignar colores random a cada Phylum:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>colores_predefinidos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"darkorange"</span>, <span class="st">"deepskyblue"</span>, <span class="st">"chartreuse"</span>, </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>colores_predefinidos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"darkorange"</span>, <span class="st">"deepskyblue"</span>, <span class="st">"black"</span>, </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"darkorchid"</span>, <span class="st">"gold"</span>, <span class="st">"darkgreen"</span>, <span class="st">"royalblue"</span>, <span class="st">"brown"</span>, <span class="st">"grey"</span>, </span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"pink"</span>, <span class="st">"navy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -154,6 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Entrega6_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>En este gráfico se puede observar, que a parte del grupo 106, todos los puntos se encuentran próximos entre ellos, de donde podemos asumir que hay un alto grado de homogeneidad en las medidas de similitud entre las entidades representades. De igual manera, podemos observar que dado que la escala del gráfico es bastante pequeña, podemos decir que las diferencias en las medidas de similitud son mínimas.</p>
 <p>#SP</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Asegurándonos de que mds_result es un data frame y tiene nombres de fila</span></span>
@@ -174,6 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Entrega6_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>A diferencia del gráfico anterior, en este gráfico podemos observar que dada la proximidad de la mayoría de puntos, parece que hay un alto grado de homogeneidad en las medidas de similitud entre las entidades representadas, ya que no se observa una dispersión amplia. También podemos observar que dado que la escala del gráfico es bastante pequeña, podemos decir que las diferencias en las medidas de similitud son mínimas. Y se puede destacar que se observan pocos <em>outliers</em>.</p>
 <p>#PM</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Asegurándonos de que mds_result es un data frame y tiene nombres de fila</span></span>
@@ -194,6 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Entrega6_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>En este gráfico al igual que el primero, a excepción del grupo 101, todos los puntos se encuentran próximos entre ellos, de donde podemos asumir que hay un alto grado de homogeneidad en las medidas de similitud entre las entidades representades. De igual manera, podemos observar que dado que la escala del gráfico es bastante pequeña, podemos decir que las diferencias en las medidas de similitud son mínimas.</p>
 
 </main>
 <!-- /main column -->

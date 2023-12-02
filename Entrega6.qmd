@@ -33,7 +33,7 @@ phylum_list <- read.table("fileListANIMAL_phylum.txt")
 ```{r}
 # Aquí he querido asignar colores random a cada Phylum:
 
-colores_predefinidos <- c("red", "blue", "green", "darkorange", "deepskyblue", "chartreuse", 
+colores_predefinidos <- c("red", "blue", "green", "darkorange", "deepskyblue", "black", 
                           "darkorchid", "gold", "darkgreen", "royalblue", "brown", "grey", 
                           "pink", "navy")
 ```
@@ -64,7 +64,7 @@ ggplot(mds_vh_data, aes(x = V1, y = V2, color = phylum)) +
   scale_color_manual(values = colores_predefinidos) # Esto usa una paleta de colores predefinida 
   
 ```
-
+En este gráfico se puede observar, que a parte del grupo 106, todos los puntos se encuentran próximos entre ellos, de donde podemos asumir que hay un alto grado de homogeneidad en las medidas de similitud entre las entidades representades. De igual manera, podemos observar que dado que la escala del gráfico es bastante pequeña, podemos decir que las diferencias en las medidas de similitud son mínimas.
 
 #SP
 ```{r}
@@ -86,6 +86,11 @@ ggplot(mds_sp_data, aes(x = V1, y = V2, color = phylum)) +
   
 ```
 
+A diferencia del gráfico anterior, en este gráfico podemos observar que dada la proximidad de la mayoría de puntos, parece que hay un alto grado de homogeneidad en las medidas de similitud entre las entidades representadas, ya que no se observa una dispersión amplia.
+También podemos observar que dado que la escala del gráfico es bastante pequeña, podemos decir que las diferencias en las medidas de similitud son mínimas.
+Y se puede destacar que se observan pocos *outliers*.
+
+
 #PM
 ```{r}
 # Asegurándonos de que mds_result es un data frame y tiene nombres de fila
@@ -105,3 +110,9 @@ ggplot(mds_pm_data, aes(x = V1, y = V2, color = phylum)) +
   scale_color_manual(values = colores_predefinidos) # Esto usa una paleta de colores predefinida 
   
 ```
+
+
+En este gráfico al igual que el primero, a excepción del grupo 101, todos los puntos se encuentran próximos entre ellos, de donde podemos asumir que hay un alto grado de homogeneidad en las medidas de similitud entre las entidades representades. De igual manera, podemos observar que dado que la escala del gráfico es bastante pequeña, podemos decir que las diferencias en las medidas de similitud son mínimas.
+
+
+
